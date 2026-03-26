@@ -17,3 +17,4 @@ for f in sorted(os.listdir("/app")):
     print(f"  {f}")
 print()
 print("Isolated from host. Done.")
+# changed

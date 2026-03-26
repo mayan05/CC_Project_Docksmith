@@ -67,7 +67,7 @@ def cmd_run(args):
     parser = argparse.ArgumentParser(prog="docksmith run")
     parser.add_argument("-e", action="append", dest="env_overrides", default=[], metavar="KEY=VALUE")
     parser.add_argument("name_tag")
-    parser.add_argument("cmd", nargs="*")
+    parser.add_argument("cmd", nargs=argparse.REMAINDER)
     opts = parser.parse_args(args)
     name, tag = parse_name_tag(opts.name_tag)
     if not image_exists(name, tag):
